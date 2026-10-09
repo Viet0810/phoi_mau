@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Xác nhận đăng ký tài khoản thành công.">
+    <title>Đăng ký thành công | CodeGym</title>
+    <script>
+        document.documentElement.dataset.palette =
+            new URLSearchParams(window.location.search).get("theme") === "forest" ? "forest" : "codegym";
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body class="account-page">
+<header class="account-header">
+    <a class="account-brand" href="index.html" aria-label="CodeGym - về trang chủ">
+        <img src="images/logo.png" alt="CodeGym">
+        <span>CodeGym</span>
+    </a>
+</header>
+
+<main class="account-main success-main">
+    <section class="signup-card success-card" aria-labelledby="success-title">
+        <div class="success-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+                <path d="m13 24 7 7 15-16"></path>
+            </svg>
+        </div>
+        <span class="eyebrow">HOÀN TẤT</span>
+        <h1 id="success-title">Tạo tài khoản thành công!</h1>
+        <p>Tài khoản của bạn đã sẵn sàng. Hãy bắt đầu khám phá các khóa học và xây dựng kỹ năng mới.</p>
+        <a class="submit-button success-action" href="index.html">Khám phá trang chủ</a>
+        <a class="success-secondary" href="signup.html">Tạo tài khoản khác</a>
+    </section>
+</main>
+
+<footer class="account-footer">© 2026 CodeGym · Học tập theo cách của bạn</footer>
+</body>
+</html>

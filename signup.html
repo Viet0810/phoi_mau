@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tạo tài khoản CodeGym miễn phí chỉ với vài thông tin cơ bản.">
+    <title>Tạo tài khoản | CodeGym</title>
+    <script>
+        document.documentElement.dataset.palette =
+            new URLSearchParams(window.location.search).get("theme") === "forest" ? "forest" : "codegym";
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body class="account-page">
+<header class="account-header">
+    <a class="account-brand" href="index.html" aria-label="CodeGym - về trang chủ">
+        <img src="images/logo.png" alt="CodeGym">
+        <span>CodeGym</span>
+    </a>
+    <p>Đã có tài khoản? <a href="#signup-form">Đăng nhập</a></p>
+</header>
+
+<main class="account-main">
+    <section class="signup-card" aria-labelledby="signup-title">
+        <div class="signup-intro">
+            <span class="eyebrow">BẮT ĐẦU HÀNH TRÌNH</span>
+            <h1 id="signup-title">Tạo tài khoản của bạn</h1>
+            <p>Điền thông tin bên dưới để bắt đầu học tập và khám phá các khóa học.</p>
+        </div>
+
+        <form id="signup-form" novalidate>
+            <div class="form-field">
+                <label for="full-name">Họ và tên <span aria-hidden="true">*</span></label>
+                <input id="full-name" name="fullName" type="text" autocomplete="name"
+                       placeholder="Ví dụ: Nguyễn Minh Anh" required maxlength="100"
+                       aria-describedby="full-name-error">
+                <p class="field-error" id="full-name-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email"
+                       placeholder="ban@example.com" required maxlength="254"
+                       aria-describedby="email-hint email-error">
+                <p class="field-hint" id="email-hint">Dùng email bạn thường truy cập để nhận thông tin tài khoản.</p>
+                <p class="field-error" id="email-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+                <label for="password">Mật khẩu <span aria-hidden="true">*</span></label>
+                <div class="password-control">
+                    <input id="password" name="password" type="password" autocomplete="new-password"
+                           placeholder="Tạo mật khẩu" required minlength="8" maxlength="64"
+                           aria-describedby="password-hint password-error">
+                    <button class="visibility-toggle" type="button" data-password-toggle="password"
+                            aria-label="Hiện mật khẩu" aria-pressed="false">Hiện</button>
+                </div>
+                <p class="field-hint" id="password-hint">Ít nhất 8 ký tự. Không dùng lại mật khẩu ở nơi khác.</p>
+                <p class="field-error" id="password-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+                <label for="confirm-password">Xác nhận mật khẩu <span aria-hidden="true">*</span></label>
+                <div class="password-control">
+                    <input id="confirm-password" name="confirmPassword" type="password"
+                           autocomplete="new-password" placeholder="Nhập lại mật khẩu"
+                           required maxlength="64" aria-describedby="confirm-password-error">
+                    <button class="visibility-toggle" type="button" data-password-toggle="confirm-password"
+                            aria-label="Hiện mật khẩu xác nhận" aria-pressed="false">Hiện</button>
+                </div>
+                <p class="field-error" id="confirm-password-error" aria-live="polite"></p>
+            </div>
+
+            <p class="form-error-summary" id="form-error-summary" role="alert" tabindex="-1"></p>
+            <button class="submit-button" type="submit">Tạo tài khoản</button>
+            <p class="terms-note">Bằng việc tiếp tục, bạn đồng ý với
+                <a href="#terms">Điều khoản sử dụng</a> và <a href="#privacy">Chính sách bảo mật</a>.
+            </p>
+        </form>
+    </section>
+
+    <p class="account-back"><a href="index.html">← Quay lại trang chủ</a></p>
+</main>
+
+<footer class="account-footer">© 2026 CodeGym · Học tập theo cách của bạn</footer>
+<script src="js/signup.js"></script>
+</body>
+</html>

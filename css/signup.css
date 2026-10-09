@@ -1,0 +1,337 @@
+:root {
+    --account-ink: #132435;
+    --account-muted: #586b7d;
+    --account-border: #d5e2eb;
+    --account-surface: #ffffff;
+    --account-background: #f3f9fc;
+    --account-error: #b42318;
+    --account-focus: rgba(var(--tier-1-rgb), 0.24);
+}
+
+html[data-palette="forest"] {
+    --account-background: #f3faf5;
+}
+
+.account-page {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--account-background);
+    color: var(--account-ink);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.account-header {
+    width: min(100% - 40px, 1100px);
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.account-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--account-ink);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.account-brand img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.account-header p {
+    margin: 0;
+    color: var(--account-muted);
+    font-size: 14px;
+}
+
+.account-page a:not(.account-brand) {
+    color: var(--tier-1);
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.account-page a:focus-visible,
+.account-page button:focus-visible,
+.account-page input:focus-visible {
+    outline: 3px solid var(--tier-1);
+    outline-offset: 3px;
+}
+
+.account-main {
+    width: min(100% - 32px, 480px);
+    margin: 28px auto 40px;
+    flex: 1;
+}
+
+.signup-card {
+    padding: 36px;
+    border: 1px solid #e1ebf1;
+    border-radius: 18px;
+    background: var(--account-surface);
+    box-shadow: 0 16px 48px rgba(19, 36, 53, 0.08);
+}
+
+.signup-intro {
+    margin-bottom: 26px;
+}
+
+.eyebrow {
+    color: var(--tier-1);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.signup-intro h1,
+.success-card h1 {
+    margin: 10px 0;
+    color: var(--account-ink);
+    font-size: clamp(26px, 5vw, 32px);
+    line-height: 1.2;
+}
+
+.signup-intro > p,
+.success-card > p {
+    margin: 0;
+    color: var(--account-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--account-ink);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-field label span {
+    color: var(--account-error);
+}
+
+.form-field input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 13px;
+    border: 1px solid var(--account-border);
+    border-radius: 9px;
+    background: #fff;
+    color: var(--account-ink);
+    font: inherit;
+    font-size: 15px;
+}
+
+.form-field input::placeholder {
+    color: #8493a1;
+}
+
+.form-field input[aria-invalid="true"] {
+    border-color: var(--account-error);
+}
+
+.password-control {
+    position: relative;
+}
+
+.password-control input {
+    padding-right: 76px;
+}
+
+.visibility-toggle {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    min-width: 64px;
+    min-height: 40px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: var(--tier-1);
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.field-hint,
+.field-error {
+    margin: 6px 0 0;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.field-hint {
+    color: var(--account-muted);
+}
+
+.field-error,
+.form-error-summary {
+    color: var(--account-error);
+}
+
+.field-error:empty,
+.form-error-summary:empty {
+    display: none;
+}
+
+.form-error-summary {
+    margin: 0 0 12px;
+    font-size: 14px;
+}
+
+.submit-button {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border: 2px solid var(--tier-1);
+    border-radius: 9px;
+    background: var(--tier-1);
+    color: #000;
+    cursor: pointer;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.submit-button:hover {
+    background: var(--tier-2);
+    border-color: var(--tier-2);
+    color: #000;
+    transform: translateY(-1px);
+}
+
+.terms-note {
+    margin: 15px 0 0;
+    color: var(--account-muted);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.account-back {
+    margin: 22px 0 0;
+    text-align: center;
+}
+
+.account-back a,
+.success-secondary {
+    font-size: 14px;
+}
+
+.account-footer {
+    padding: 18px 16px;
+    color: var(--account-muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+.success-main {
+    display: flex;
+    align-items: center;
+}
+
+.success-card {
+    width: 100%;
+    text-align: center;
+}
+
+.success-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 22px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--tier-7);
+}
+
+.success-icon svg {
+    width: 38px;
+    height: 38px;
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 4;
+}
+
+.success-card h1 {
+    margin-top: 12px;
+}
+
+.success-card > p {
+    margin-bottom: 26px;
+}
+
+.success-action {
+    margin-bottom: 18px;
+}
+
+.success-secondary {
+    display: inline-block;
+    padding: 8px;
+}
+
+@media (max-width: 520px) {
+    .account-header {
+        width: calc(100% - 32px);
+        min-height: 68px;
+    }
+
+    .account-brand {
+        gap: 7px;
+        font-size: 17px;
+    }
+
+    .account-brand img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .account-header p {
+        font-size: 12px;
+    }
+
+    .account-main {
+        width: calc(100% - 24px);
+        margin-top: 12px;
+    }
+
+    .signup-card {
+        padding: 26px 20px;
+        border-radius: 14px;
+    }
+
+    .form-field {
+        margin-bottom: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .submit-button {
+        transition: none;
+    }
+}
