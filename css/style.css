@@ -1,0 +1,302 @@
+:root {
+    --tier-1: #00ADEE;
+    --tier-2: #00B2EF;
+    --tier-3: #00B8F1;
+    --tier-4: #00BFF2;
+    --tier-5: #38C9F3;
+    --tier-6: #63D0F5;
+    --tier-7: #8DD7F7;
+    --tier-8: #A9E0F9;
+    --tier-9: #C6E9FA;
+    --tier-1-rgb: 0, 173, 238;
+    --text-color: #000000;
+}
+
+html[data-palette="forest"] {
+    --tier-1: #197A45;
+    --tier-2: #278B53;
+    --tier-3: #379B62;
+    --tier-4: #49AA70;
+    --tier-5: #68B987;
+    --tier-6: #8AC99F;
+    --tier-7: #A9D9B8;
+    --tier-8: #C4E7CE;
+    --tier-9: #DFF2E5;
+    --tier-1-rgb: 25, 122, 69;
+}
+
+body {
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--tier-1);
+}
+
+.navbar .nav-link {
+    color: var(--text-color) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--text-color) !important;
+    text-decoration: underline;
+}
+
+.hero-app {
+    background-color: var(--tier-4);
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+a.app-btn {
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 218px;
+    height: 70px;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 30px;
+    box-shadow: 0px 6px 57px 0px rgba(17, 5, 35, 0.2);
+    margin-bottom: 30px;
+}
+
+a.app-btn.black {
+    background-color: var(--tier-2);
+    position: relative;
+    top: 1px;
+    margin-right: 0;
+}
+
+a.app-btn img {
+    margin-right: 25px;
+    position: relative;
+    top: 14px;
+}
+
+span.top {
+    font-size: 12px;
+    padding-top: 8px;
+    display: inline-block;
+    color: var(--text-color);
+}
+
+span.bottom {
+    padding-left: 53px;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    position: relative;
+    top: -4px;
+}
+
+.hero-app-content {
+    padding: 125px 30px;
+    color: var(--text-color);
+}
+
+.features {
+    background-color: var(--tier-7);
+    padding-top: 85px;
+    padding-bottom: 25px;
+}
+
+.feature {
+    display: inline-flex;
+}
+
+.feature-img {
+    padding-right: 40px;
+}
+
+.feature-content {
+    width: 88%;
+    padding-left: 20px;
+}
+
+.feature-content h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.feature-content p {
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.welcome-area {
+    padding-top: 86px;
+    padding-bottom: 50px;
+}
+
+.welcome-area h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 42px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+}
+
+.welcome-area p {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 30px;
+    line-height: 65px;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.best-app {
+    margin-top: 50px;
+}
+
+.download-area::before,
+.subscribe-area::before {
+    background-color: rgba(var(--tier-1-rgb), 0.9);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.download-area,
+.subscribe-area {
+    background-image: url("../images/cta.jpg");
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.download-content {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.download-content h1,
+.download-content h4,
+.download-content p {
+    color: var(--text-color);
+}
+
+.pricing-area {
+    padding-top: 85px;
+    padding-bottom: 50px;
+}
+
+.price {
+    font-size: 30pt;
+    font-weight: 700;
+}
+
+.price span.time-interval {
+    font-size: 14pt;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.pricing-area .card .btn {
+    margin: 20px;
+}
+
+.btn-primary {
+    background-color: var(--tier-1);
+    border-color: var(--tier-1);
+    color: var(--text-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--tier-2);
+    border-color: var(--tier-2);
+    color: var(--text-color);
+}
+
+.subscribe-form {
+    position: relative;
+}
+
+.subscribe-input {
+    width: 90%;
+    position: relative;
+    border-radius: 40px;
+    border: none;
+    padding-left: 30px;
+    height: 60px;
+}
+
+.btn-subscribe {
+    position: absolute;
+    top: 5px;
+    right: 42px;
+    height: 50px;
+    border: none;
+    background-color: var(--tier-1);
+    color: var(--text-color);
+    border-radius: 36px;
+    width: 180px;
+    cursor: pointer;
+}
+
+.site-footer {
+    background-color: var(--tier-9);
+    padding: 20px;
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--text-color);
+}
+
+.forest-theme-link {
+    display: inline;
+}
+
+.codegym-theme-link {
+    display: none;
+}
+
+html[data-palette="forest"] .forest-theme-link {
+    display: none;
+}
+
+html[data-palette="forest"] .codegym-theme-link {
+    display: inline;
+}
+
+@media screen and (max-width: 767px) {
+    .feature {
+        margin-bottom: 30px;
+    }
+
+    .hero-app {
+        padding-top: 50px;
+    }
+
+    .hero-app-content {
+        padding: 50px 15px;
+    }
+
+    .site-footer {
+        padding: 16px;
+    }
+}
